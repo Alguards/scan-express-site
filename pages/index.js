@@ -3,6 +3,8 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 export default function Home() {
+  const prefix = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -14,7 +16,7 @@ export default function Home() {
       <header className="relative px-6 py-6 bg-black text-white">
         <div className="flex items-center justify-between relative z-10">
           <div className="flex items-center space-x-4">
-            <img src="/altguards_logo.png" alt="Altguards Logo" className="w-10 h-10" />
+            <img src={`${prefix}/altguards_logo.png`} alt="Altguards Logo" className="w-10 h-10" />
             <h1 className="text-xl font-bold">Altguards Security</h1>
           </div>
           <nav className="space-x-4">
@@ -25,7 +27,10 @@ export default function Home() {
             </Link>
           </nav>
         </div>
-        <div className="absolute inset-0 opacity-10 bg-cover bg-center -z-10" style={{ backgroundImage: 'url(/altguards_logo.png)' }}></div>
+        <div
+          className="absolute inset-0 opacity-10 bg-cover bg-center -z-10"
+          style={{ backgroundImage: `url('${prefix}/altguards_logo.png')` }}
+        ></div>
       </header>
 
       {/* Hero */}
@@ -90,7 +95,7 @@ export default function Home() {
 
         <div className="text-center mt-10">
           <a
-            href="/rapport-exemple.pdf"
+            href={`${prefix}/rapport-exemple.pdf`}
             className="inline-block text-sm underline text-gray-600 hover:text-black"
             download
           >
