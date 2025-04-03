@@ -16,7 +16,7 @@ export default function Home() {
       <header className="relative px-6 py-6 bg-black text-white">
         <div className="flex items-center justify-between relative z-10">
           <div className="flex items-center space-x-4">
-            <img src={`${prefix}/altguards_logo.png`} alt="Altguards Logo" className="w-10 h-10" />
+	<img src={`${prefix}/altguards_logo.png`} alt="Altguards Logo" className="w-10 h-10" />
             <h1 className="text-xl font-bold">Altguards Security</h1>
           </div>
           <nav className="space-x-4">
