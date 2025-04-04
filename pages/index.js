@@ -135,7 +135,7 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="text-center text-sm text-gray-500 py-6">
-        © 2025 Altguards Security. Tous droits réservés. — contact@altguards.io
+        © 2025 Altguards Security. Tous droits réservés. — contact@altguards.fr
       </footer>
     </motion.div>
   );
