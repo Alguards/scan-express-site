@@ -1,25 +1,35 @@
 // pages/a-propos.js
+import Header from "../components/Header";
+import Head from "next/head";
 
 export default function APropos() {
   return (
-    <div className="min-h-screen bg-white text-gray-800 px-6 py-20">
-      <h1 className="text-4xl font-bold mb-6 text-center">À propos</h1>
-      <div className="max-w-3xl mx-auto space-y-6 text-lg">
-        <p>
-          Altguards Security est un service indépendant spécialisé dans l’audit d’exposition numérique. Notre mission :
-          vous aider à reprendre le contrôle sur votre image et vos données personnelles accessibles en ligne.
-        </p>
-        <p>
-          Que vous soyez un particulier, un dirigeant, une entreprise ou une cible de veille stratégique, notre méthode repose
-          sur des techniques OSINT éprouvées, une analyse pragmatique et des recommandations concrètes.
-        </p>
-        <p>
-          Le service est fondé et opéré par Alexandre D., ingénieur en cybersécurité spécialisé en blue teaming et en veille technique. Il combine rigueur, confidentialité et efficacité.
-        </p>
-        <p>
-          Pour toute demande spécifique ou projet sensible, n’hésitez pas à nous contacter directement.
-        </p>
+    <>
+      <Head>
+        <title>À Propos - Altguards Security</title>
+      </Head>
+      <div className="min-h-screen bg-white text-gray-800">
+        <Header />
+
+        <section className="px-4 md:px-6 py-12 md:py-20 text-center bg-gray-100">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">À propos de nous</h2>
+          <p className="text-base md:text-lg max-w-2xl mx-auto text-gray-600">
+            Altguards Security est spécialisé dans la protection et l'audit de votre identité numérique.
+          </p>
+        </section>
+
+        <section className="px-4 md:px-6 py-12 md:py-20 bg-white">
+          <div className="max-w-2xl mx-auto">
+            <p className="text-sm md:text-base text-gray-600">
+              Nous offrons des solutions pratiques et efficaces adaptées aux besoins spécifiques des PME et particuliers, avec une approche axée sur la transparence, la discrétion et l'efficacité.
+            </p>
+          </div>
+        </section>
+
+        <footer className="text-center text-sm text-gray-500 py-6">
+          © 2025 Altguards Security. Tous droits réservés. — contact@altguards.io
+        </footer>
       </div>
-    </div>
+    </>
   );
 }

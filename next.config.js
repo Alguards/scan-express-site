@@ -1,11 +1,10 @@
+// next.config.js
+const isProd = process.env.NODE_ENV === 'production';
+
 const nextConfig = {
   output: 'export',
-  basePath: '/scan-express-site',
-  assetPrefix: '/scan-express-site/',
-  trailingSlash: true,
-  images: {
-    unoptimized: true,
-  },
+  basePath: isProd ? '/scan-express-site' : '',
+  assetPrefix: isProd ? '/scan-express-site/' : '',
 };
 
 module.exports = nextConfig;
